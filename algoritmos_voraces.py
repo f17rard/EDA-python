@@ -16,3 +16,20 @@ for monto in montos:
 """ 
 
 """Ejercicio de la mochila"""
+def ProblemaMochila(Peso, valores, pesos):
+    valor_peso = []
+    soluciones = [0.0*n for n in range(len(valores))]
+    for i in range(len(valores)):
+        valor_peso.append(valores[i]/pesos[i])
+        max = valor_peso[0]
+    
+    for i in range(1, len(valor_peso)):
+        if max < valor_peso[i]:
+            max = valor_peso[i]
+        
+    print(max)
+    
+    
+pesos = [10, 20, 30, 40, 50]
+valores = [20, 30, 66, 40, 60]
+ProblemaMochila(100, valores, pesos)
