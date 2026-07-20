@@ -1,4 +1,4 @@
-listA = [ -8, 2, 4, 6, 8, 12, 19, 23, 40] #lista para busqueda binaria
+listA = [ -8, 2, 4, 6, 8, 12, 19, 23, 40] #lista para usqueda binaria
 listB = [1, 5, 2, 40, 7, 8, 9, 6, 35, 12, 20] #lista para busqueda lineal
 
 def secuencial_desordenado(lista, length, numero):
