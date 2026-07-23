@@ -1,4 +1,4 @@
-"""# fibonacci en memorización
+# fibonacci en memorización
 
 cache = {}
 def fibonacci_memo(n, cache = None):
@@ -18,9 +18,8 @@ def fibonacci_memo(n, cache = None):
 
 print(fibonacci_memo(6, cache))
 print(fibonacci_memo(7, cache))
-"""
 
-"""# fibonachi tabulacion
+# fibonachi tabulacion
 def fibonacci_tab(n):
     dp = {}
     dp[0] = 0
@@ -34,9 +33,8 @@ def fibonacci_tab(n):
 print(fibonacci_tab(3))
 print(fibonacci_tab(5))
 print(fibonacci_tab(6))
-"""
 
-"""# Secuencia más larga
+# Secuencia más larga
 def Subsecuencia_mas_larga(lista: list):
     lenght = [1] * len(lista)
     
@@ -50,7 +48,6 @@ def Subsecuencia_mas_larga(lista: list):
 
 ejercicio = [6, 2, 5, 1, 7, 4, 8, 3]
 print(Subsecuencia_mas_larga(ejercicio)) 
-"""
 
 # caminos en cuadricula
 
@@ -97,3 +94,29 @@ while f < n:
 for sec in secuencias:
     print(sec)
 
+# Mochila dinamica
+
+valor = [8, 5, 4]
+pesos = [6, 5, 5]
+peso_mochila = 10
+
+def ProblemaMochilaDinamica(Valores, Pesos, peso_m) -> list:
+    n = len(Pesos)
+    seleccion = [[0]*(peso_m+1) for _ in range(n+1)]
+    
+    for i in range(1, n+1):
+        for w in range(peso_m + 1):
+            
+            if Pesos[i-1] > w:
+                seleccion[i][w] = seleccion[i-1][w]
+            else:
+                seleccion[i][w] = max(seleccion[i-1][w], Valores[i-1] + seleccion[i-1][w - pesos[i-1]])
+    
+    return seleccion
+
+tabla = ProblemaMochilaDinamica(valor, pesos, peso_mochila)
+
+for fila in tabla:
+    print(fila)
+    
+print("\nValor Maximo", tabla[-1][-1])

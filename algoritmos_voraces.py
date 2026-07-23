@@ -1,4 +1,4 @@
-"""# Ejercicio del cambio
+# Ejercicio del cambio
 denominaciones = [100, 20, 10, 5, 1]
 
 montos = [47, 83, 156, 1, 3]
@@ -12,10 +12,9 @@ for monto in montos:
             num_billetes[i] += 1
             
     print(num_billetes)
-"""
 
 
-""" # Ejercicio de la mochila
+# Ejercicio de la mochila
 def ProblemaMochila(Peso: int, valores: list, pesos: list):
     soluciones = [0.0*i for i in range(len(valores))]
     valor_peso = [valores[i]/pesos[i] for i in range(len(valores))]
@@ -67,9 +66,8 @@ if __name__ == "__main__":
         ]
     for c in casos:
         print(c, ProblemaMochila(*c))
-"""
 
-"""Ejercicio de los trabajadores"""
+# Ejercicio de los trabajadores
 trabajadores = ["A","B","C","D"]
 tareas = ["T1","T2","T3","T4"]
 costos = [
